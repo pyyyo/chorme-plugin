@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2, 
+    "name": "csgoGun",  
+    "version": "1.0", 
+    "description": "获取csgo枪，刀价格", 
+    "browser_action": {
+        "default_icon": {                    
+            "16": "images/csgo16.png",           
+            "24": "images/csgo24.png",           
+            "32": "images/csgo32.png"            
+        },
+        "default_title": "csgo",      
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "48": "images/csgo48.png",
+        "128": "images/csgo128.png"
+    },
+    
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "tabs", 
+        "activeTab",
+        "notifications",
+        "webRequest",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "author": "jay", 
+    "homepage_url": "https://github.com/pyyyo" 
+}
