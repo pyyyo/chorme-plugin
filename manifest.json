@@ -2,20 +2,17 @@
     "manifest_version": 2, 
     "name": "csgoGun",  
     "version": "1.0", 
-    "description": "获取csgo枪，刀价格", 
+    "description": "csgo", 
     "browser_action": {
         "default_icon": {                    
             "16": "images/csgo16.png",           
             "24": "images/csgo24.png",           
-            "32": "images/csgo32.png"            
+            "32": "images/csgo32.png",
+            "48": "images/csgo48.png",
+            "128": "images/csgo128.png"         
         },
         "default_title": "csgo",      
         "default_popup": "popup.html"
-    },
-
-    "icons": {
-        "48": "images/csgo48.png",
-        "128": "images/csgo128.png"
     },
     
     "content_scripts": [
