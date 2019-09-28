@@ -34,19 +34,32 @@ $(function () {
                 dd = dd + "<p class='text'> 价格：<span class='price_cn'>￥" + csgo.steam_price_cny + "</span>&nbsp;<span class='price'>（$" + csgo.steam_price + "）</span></p>";
                 dd = dd + "</dd>";
                 dl.append(dd);
-                //console.log(csgo);
+                console.log(csgo);
             },
             error: function (e) {
                 console.log(e);
             }
         });
     };
-    //$("#loading").attr("src","");
 });
 
-// $("#btn").click(e => {
-//     alert("即将打开csgo！");
-// })
-//
-// document.getElementById("goods").onclick = function (){mainQuery()}
-//
+$("#btn").click(e => {
+    var serach = document.getElementById("serach").value;
+
+    if(serach == null || serach == ''){
+        return;
+    }
+
+    $.ajax({
+        type: "get",
+        url: "",
+        data: {},
+        datatype: "json",
+        success: function (data) {
+
+        },
+        error: function (e) {
+            console.log(e);
+        }
+    })
+})
